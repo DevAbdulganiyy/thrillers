@@ -77,6 +77,9 @@ export class UserEntity extends EntityRelationalHelper implements User {
   })
   status?: StatusEntity;
 
+  @Column({ type: Number, nullable: true })
+  credits?: number ;
+
   @CreateDateColumn()
   createdAt: Date;
 
