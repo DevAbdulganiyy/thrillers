@@ -23,7 +23,8 @@ export class UsersService {
   async create(createProfileDto: CreateUserDto): Promise<User> {
     const clonedPayload = {
       provider: AuthProvidersEnum.email,
-      ...createProfileDto,credits:1000
+      ...createProfileDto,
+      credits: 1000,
     };
 
     if (clonedPayload.password) {
@@ -100,7 +101,7 @@ export class UsersService {
       }
     }
 
-    return this.usersRepository.create({...clonedPayload});
+    return this.usersRepository.create({ ...clonedPayload });
   }
 
   findManyWithPagination({

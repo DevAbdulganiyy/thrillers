@@ -22,7 +22,7 @@ export class UserMapper {
     user.role = raw.role;
     user.status = raw.status;
     user.createdAt = raw.createdAt;
-    user.credits = raw.credits
+    user.credits = raw.credits;
     user.updatedAt = raw.updatedAt;
     user.deletedAt = raw.deletedAt;
     return user;
@@ -67,7 +67,7 @@ export class UserMapper {
     userEntity.photo = photo;
     userEntity.role = role;
     userEntity.status = status;
-    userEntity.credits = user.credits
+    userEntity.credits = user.credits;
     userEntity.createdAt = user.createdAt;
     userEntity.updatedAt = user.updatedAt;
     userEntity.deletedAt = user.deletedAt;

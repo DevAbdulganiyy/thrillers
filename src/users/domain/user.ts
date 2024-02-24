@@ -25,7 +25,7 @@ export class User {
   photo?: FileType | null;
   role?: Role | null;
   status?: Status;
-  credits?:number;
+  credits?: number;
   createdAt: Date;
   updatedAt: Date;
   deletedAt: Date;

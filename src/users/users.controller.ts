@@ -27,7 +27,7 @@ import { User } from './domain/user';
 import { UsersService } from './users.service';
 
 @ApiBearerAuth()
-@Roles(RoleEnum.admin)
+@Roles(RoleEnum.admin, RoleEnum.user)
 @UseGuards(AuthGuard('jwt'), RolesGuard)
 @ApiTags('Users')
 @Controller({
@@ -47,7 +47,7 @@ export class UsersController {
   }
 
   @SerializeOptions({
-    groups: ['admin'],
+    groups: ['admin', 'user'],
   })
   @Get()
   @HttpCode(HttpStatus.OK)
@@ -74,7 +74,7 @@ export class UsersController {
   }
 
   @SerializeOptions({
-    groups: ['admin'],
+    groups: ['admin', 'user'],
   })
   @Get(':id')
   @HttpCode(HttpStatus.OK)

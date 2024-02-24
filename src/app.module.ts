@@ -11,6 +11,7 @@ import facebookConfig from './auth-facebook/config/facebook.config';
 import googleConfig from './auth-google/config/google.config';
 import twitterConfig from './auth-twitter/config/twitter.config';
 import appleConfig from './auth-apple/config/apple.config';
+import transactionConfig from './transaction/config/transaction-config';
 import path from 'path';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -46,6 +47,7 @@ import { TransactionModule } from './transaction/transaction.module';
         googleConfig,
         twitterConfig,
         appleConfig,
+        transactionConfig,
       ],
       envFilePath: ['.env'],
     }),

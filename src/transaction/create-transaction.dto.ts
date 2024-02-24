@@ -6,7 +6,7 @@ export class CreateTransactionDto {
   @IsNotEmpty()
   amount: number;
 
-  @ApiProperty({example:"debit"})
+  @ApiProperty({ example: 'debit' })
   @IsNotEmpty()
   ttype: string;
 
